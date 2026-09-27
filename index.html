@@ -175,6 +175,48 @@
     .footer-inner{display:flex;justify-content:space-between;gap:8px 20px;flex-wrap:wrap}
     .footer-inner strong{font-family:"Playfair Display",Georgia,serif;color:var(--gold-bright);letter-spacing:.08em}
 
+    /* Assistant de diagnostic */
+    [hidden]{display:none!important}
+    .chat-fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:30;display:inline-flex;align-items:center;gap:10px;padding:13px 20px 13px 16px;border:0;border-radius:999px;background:var(--gold-metal);color:#24180c;font:800 .9rem/1 "Inter",system-ui,sans-serif;box-shadow:0 12px 30px rgba(40,16,10,.35);cursor:pointer;transition:transform .18s ease,filter .18s ease}
+    .chat-fab:hover{transform:translateY(-2px);filter:brightness(1.06)}
+    .chat-fab svg{width:22px;height:22px}
+    .chat-panel{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:31;width:min(390px,calc(100vw - 24px));height:min(600px,calc(100svh - 36px));display:flex;flex-direction:column;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 70px rgba(20,8,6,.35);overflow:hidden}
+    .chat-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 14px 14px 18px;background:var(--brand-gradient);color:#fff}
+    .chat-head strong{display:block;font-family:"Playfair Display",Georgia,serif;font-size:1.1rem;color:var(--gold-bright);letter-spacing:.03em}
+    .chat-head span{display:block;font-size:.72rem;color:var(--on-dark-muted)}
+    .chat-close{width:40px;height:40px;flex:none;border:1px solid var(--gold-line);border-radius:50%;background:rgba(16,7,5,.18);color:#fff;font-size:1.3rem;line-height:1;cursor:pointer}
+    .chat-close:hover{color:var(--gold-bright);border-color:var(--gold-bright)}
+    .chat-log{flex:1;overflow-y:auto;padding:18px 14px;display:flex;flex-direction:column;gap:10px;overscroll-behavior:contain}
+    .msg{margin:0;max-width:86%;padding:10px 14px;border-radius:16px;font-size:.92rem;line-height:1.5;overflow-wrap:anywhere}
+    .msg-bot{align-self:flex-start;background:var(--bg);border:1px solid var(--line);border-bottom-left-radius:4px}
+    .msg-user{align-self:flex-end;background:var(--red);color:#fff8e8;border-bottom-right-radius:4px}
+    .msg-reco{border-color:var(--gold)}
+    .msg-reco b{display:block;font-family:"Playfair Display",Georgia,serif;font-size:1.05rem;margin-bottom:4px}
+    .msg-summary{width:86%}
+    .msg-summary dl{margin:6px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:.84rem}
+    .msg-summary dt{color:var(--muted)}
+    .msg-summary dd{margin:0;font-weight:700}
+    .typing{display:flex;gap:4px;padding:14px}
+    .typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:blink 1s infinite}
+    .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+    @keyframes blink{0%,80%,100%{opacity:.25}40%{opacity:1}}
+    .chat-controls{display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--line);max-height:45%;overflow-y:auto}
+    .chat-choice{min-height:42px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:700 .86rem/1.3 "Inter",system-ui,sans-serif;cursor:pointer;text-align:left}
+    .chat-choice:hover{border-color:var(--red);color:var(--red)}
+    @media(prefers-color-scheme:dark){.chat-choice:hover{border-color:var(--gold-bright);color:var(--gold-bright)}}
+    .chat-choice.primary{background:var(--red);border-color:var(--red);color:#fff8e8;display:inline-flex;align-items:center}
+    .chat-choice.primary:hover{filter:brightness(1.12);color:#fff8e8}
+    .chat-form{display:flex;gap:8px;width:100%}
+    .chat-form input{flex:1;min-width:0;min-height:44px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font:400 .92rem "Inter",system-ui,sans-serif}
+    .chat-note{width:100%;margin:2px 0 0;font-size:.72rem;color:var(--muted)}
+    .chat-cta{margin-top:4px;min-height:55px;padding:14px 18px;border:0;border-radius:var(--r-sm);background:var(--gold-metal);color:#24180c;font:800 .95rem "Inter",system-ui,sans-serif;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .chat-cta:hover{filter:brightness(1.08)}
+    @media(max-width:560px){
+      .chat-fab{right:12px;bottom:calc(12px + env(safe-area-inset-bottom))}
+      .chat-panel{inset:auto 0 0 0;width:100%;height:calc(100svh - 48px);border-radius:18px 18px 0 0;border-bottom:0}
+    }
+    @media(prefers-reduced-motion:reduce){.typing i{animation:none;opacity:.6}}
+
     @media(max-width:860px){
       .nav-links a:not(.nav-cta){display:none}
       .wrap{width:min(100% - 32px,1160px)}
@@ -241,7 +283,7 @@
           <h1 id="hero-title">Votre talent mérite d’être <em class="gold-text">vu.</em></h1>
           <p class="lead">Nous aidons les PME, freelances et startups à transformer une présence discrète en marque claire, crédible et mémorable.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#contact">Demander un diagnostic</a>
+            <a class="btn btn-primary" href="#contact" data-open-chat>Demander un diagnostic</a>
             <a class="btn btn-secondary" href="#services">Découvrir nos services</a>
           </div>
         </div>
@@ -356,6 +398,7 @@
           <p>Expliquez-nous votre besoin. Nous vous répondrons avec une première orientation claire, sans discours compliqué.</p>
         </div>
         <div class="contact-actions">
+          <button class="chat-cta" type="button" data-open-chat hidden><span>Faire le diagnostic express (1 min)</span><span aria-hidden="true">→</span></button>
           <a href="mailto:abaghaabessolo@gmail.com?subject=Demande%20de%20diagnostic%20WEHEM&amp;body=Bonjour%20WEHEM%2C%0A%0AMon%20activit%C3%A9%20%3A%20%0AMon%20besoin%20%3A%20%0A"><span>Écrire à abaghaabessolo@gmail.com</span><span aria-hidden="true">↗</span></a>
           <p class="pay">Paiements acceptés : <strong>Airtel Money · Moov Money · Visa</strong></p>
         </div>
@@ -370,5 +413,247 @@
       <span>© 2026</span>
     </div>
   </footer>
+  <!-- Assistant de diagnostic : scénario guidé, sans IA ni collecte de données.
+       Sans JavaScript, il reste masqué et le lien e-mail reste disponible. -->
+  <button class="chat-fab" id="chat-open" type="button" aria-expanded="false" aria-controls="chat-panel" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg>
+    <span>Diagnostic express</span>
+  </button>
+  <div class="chat-panel" id="chat-panel" role="dialog" aria-labelledby="chat-title" hidden>
+    <div class="chat-head">
+      <div><strong id="chat-title">Assistant WEHEM</strong><span>Assistant automatique · réponses guidées</span></div>
+      <button class="chat-close" id="chat-close" type="button" aria-label="Fermer l’assistant">×</button>
+    </div>
+    <div class="chat-log" id="chat-log" aria-live="polite"></div>
+    <div class="chat-controls" id="chat-controls"></div>
+  </div>
+
+  <script>
+  (() => {
+    const EMAIL = 'abaghaabessolo@gmail.com';
+    const SERVICES = {
+      identite: { name: 'Identité de Marque Digitale', why: 'Votre public doit vous reconnaître et vous faire confiance au premier regard. On pose d’abord une base visuelle et un ton de marque cohérents.' },
+      facebook: { name: 'Gestion de Page Facebook & Contenu', why: 'Votre page doit redevenir active, régulière et utile : planification éditoriale, création de contenus et suivi mensuel.' },
+      audit: { name: 'Audit & Stratégie Digitale', why: 'Avant d’investir du temps ou de l’argent, on identifie ce qui bloque votre visibilité et on priorise les actions réalistes.' }
+    };
+
+    const fab = document.getElementById('chat-open');
+    const panel = document.getElementById('chat-panel');
+    const log = document.getElementById('chat-log');
+    const controls = document.getElementById('chat-controls');
+    const closeBtn = document.getElementById('chat-close');
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let answers = {};
+    let started = false;
+    let opener = fab;
+
+    const wait = ms => new Promise(r => setTimeout(r, reduceMotion ? 0 : ms));
+    const scroll = () => { log.scrollTop = log.scrollHeight; };
+
+    function bubble(from, build) {
+      const m = document.createElement('div');
+      m.className = 'msg msg-' + from;
+      if (typeof build === 'string') m.textContent = build; else build(m);
+      log.append(m);
+      scroll();
+      return m;
+    }
+
+    async function bot(...lines) {
+      for (const line of lines) {
+        const t = bubble('bot', m => { m.classList.add('typing'); m.setAttribute('aria-hidden', 'true'); m.innerHTML = '<i></i><i></i><i></i>'; });
+        await wait(500);
+        t.remove();
+        bubble('bot', line);
+      }
+    }
+
+    function focusFirst() {
+      if (panel.contains(document.activeElement) || document.activeElement === document.body) {
+        controls.querySelector('button, input, a')?.focus();
+      }
+    }
+
+    function choices(options) {
+      controls.replaceChildren();
+      for (const opt of options) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'chat-choice' + (opt.primary ? ' primary' : '');
+        b.textContent = opt.label;
+        b.addEventListener('click', () => {
+          controls.replaceChildren();
+          if (!opt.silent) bubble('user', opt.label);
+          opt.then();
+        });
+        controls.append(b);
+      }
+      focusFirst();
+    }
+
+    function textStep(placeholder, onDone) {
+      controls.replaceChildren();
+      const form = document.createElement('form');
+      form.className = 'chat-form';
+      const input = document.createElement('input');
+      input.type = 'text'; input.maxLength = 200; input.placeholder = placeholder;
+      input.setAttribute('aria-label', placeholder);
+      const send = document.createElement('button');
+      send.type = 'submit'; send.className = 'chat-choice primary'; send.textContent = 'Envoyer';
+      const skip = document.createElement('button');
+      skip.type = 'button'; skip.className = 'chat-choice'; skip.textContent = 'Passer';
+      form.append(input, send);
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const v = input.value.trim();
+        if (!v) { input.focus(); return; }
+        controls.replaceChildren(); bubble('user', v); onDone(v);
+      });
+      skip.addEventListener('click', () => { controls.replaceChildren(); bubble('user', 'Je préfère passer'); onDone(''); });
+      controls.append(form, skip);
+      input.focus();
+    }
+
+    /* ---------- Scénario ---------- */
+
+    async function welcome() {
+      answers = {};
+      await bot('Bonjour 👋 Je suis l’assistant automatique de WEHEM.', 'En 1 minute, je vous aide à identifier le service le plus adapté à votre situation. Que souhaitez-vous faire ?');
+      menu();
+    }
+
+    function menu() {
+      choices([
+        { label: 'Faire le diagnostic (1 min)', primary: true, then: askProfile },
+        { label: 'Combien ça coûte ?', then: async () => { await bot('Nos tarifs dépendent de votre besoin et de votre situation de départ : nous ne proposons pas de prix standard.', 'Le plus simple : faites le diagnostic. Nous vous répondrons avec une première orientation et une proposition adaptée.'); menu(); } },
+        { label: 'Moyens de paiement', then: async () => { await bot('Nous acceptons Airtel Money, Moov Money et Visa.'); menu(); } },
+        { label: 'Écrire directement', then: async () => { await bot('Bien sûr. Voici notre adresse : ' + EMAIL); finalActions(); } }
+      ]);
+    }
+
+    async function askProfile() {
+      await bot('Pour commencer, quel est votre profil ?');
+      choices(['PME / commerce', 'Freelance / indépendant', 'Startup', 'Autre'].map(label => ({
+        label, then: () => { answers.profil = label; askChallenge(); }
+      })));
+    }
+
+    async function askChallenge() {
+      await bot('Quel est aujourd’hui votre principal défi ?');
+      choices([
+        { label: 'Mon image ne fait pas assez professionnelle', key: 'identite' },
+        { label: 'Ma page Facebook est inactive ou irrégulière', key: 'facebook' },
+        { label: 'Je publie, mais sans résultats', key: 'audit' },
+        { label: 'On ne me trouve pas en ligne', key: 'audit' },
+        { label: 'Je ne sais pas par où commencer', key: 'audit' }
+      ].map(o => ({ label: o.label, then: () => { answers.defi = o.label; answers.service = SERVICES[o.key]; recommend(); } })));
+    }
+
+    async function recommend() {
+      await bot('Merci, c’est clair.');
+      await wait(300);
+      bubble('bot', m => {
+        m.classList.add('msg-reco');
+        const b = document.createElement('b'); b.textContent = '→ ' + answers.service.name;
+        m.append('Le service le plus adapté pour démarrer :', b, answers.service.why);
+      });
+      await bot('Encore 3 petites questions pour préparer votre demande. Où en êtes-vous aujourd’hui ?');
+      choices(['J’ai une page Facebook', 'J’ai un site web', 'J’ai les deux', 'Je n’ai encore rien en ligne'].map(label => ({
+        label, then: () => { answers.situation = label; askTiming(); }
+      })));
+    }
+
+    async function askTiming() {
+      await bot('Quand souhaitez-vous démarrer ?');
+      choices(['Ce mois-ci', 'Dans 1 à 3 mois', 'Je me renseigne pour l’instant'].map(label => ({
+        label, then: () => { answers.delai = label; askActivity(); }
+      })));
+    }
+
+    async function askActivity() {
+      await bot('Dernière question (facultative) : décrivez votre activité en une phrase.');
+      textStep('Ex. : salon de coiffure à Libreville', v => { answers.activite = v; summary(); });
+    }
+
+    async function summary() {
+      await bot('Parfait. Voici le résumé de votre demande :');
+      bubble('bot', m => {
+        m.classList.add('msg-summary');
+        const dl = document.createElement('dl');
+        for (const [k, v] of rows()) {
+          const dt = document.createElement('dt'); dt.textContent = k;
+          const dd = document.createElement('dd'); dd.textContent = v;
+          dl.append(dt, dd);
+        }
+        m.append(dl);
+      });
+      await bot('Cliquez sur « Envoyer ma demande » : votre messagerie s’ouvrira avec ce résumé déjà rédigé. Ajoutez simplement votre nom et votre numéro.');
+      finalActions(true);
+    }
+
+    function rows() {
+      return [
+        ['Profil', answers.profil],
+        ['Défi', answers.defi],
+        ['Service conseillé', answers.service?.name],
+        ['Situation', answers.situation],
+        ['Démarrage', answers.delai],
+        ['Activité', answers.activite || '—']
+      ].filter(([, v]) => v);
+    }
+
+    function mailtoHref(withSummary) {
+      const subject = withSummary ? 'Diagnostic express WEHEM — ' + answers.service.name : 'Demande de diagnostic WEHEM';
+      const body = withSummary
+        ? 'Bonjour WEHEM,\n\nVoici ma demande (diagnostic express du site) :\n' + rows().map(([k, v]) => '- ' + k + ' : ' + v).join('\n') + '\n\nNom :\nTéléphone :\n'
+        : 'Bonjour WEHEM,\n\nMon activité :\nMon besoin :\n\nNom :\nTéléphone :\n';
+      return 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
+
+    function finalActions(withSummary = false) {
+      controls.replaceChildren();
+      const a = document.createElement('a');
+      a.className = 'chat-choice primary';
+      a.href = mailtoHref(withSummary);
+      a.textContent = withSummary ? 'Envoyer ma demande ✉' : 'Ouvrir ma messagerie ✉';
+      const again = document.createElement('button');
+      again.type = 'button'; again.className = 'chat-choice'; again.textContent = 'Recommencer';
+      again.addEventListener('click', () => { log.replaceChildren(); controls.replaceChildren(); welcome(); });
+      const note = document.createElement('p');
+      note.className = 'chat-note';
+      note.textContent = 'Aucune donnée n’est enregistrée par ce site : tout passe par votre messagerie.';
+      controls.append(a, again, note);
+      focusFirst();
+    }
+
+    /* ---------- Ouverture / fermeture ---------- */
+
+    function open(from) {
+      opener = from || fab;
+      panel.hidden = false;
+      fab.hidden = true;
+      fab.setAttribute('aria-expanded', 'true');
+      if (!started) { started = true; welcome(); }
+      else focusFirst();
+      closeBtn.focus({ preventScroll: true });
+    }
+
+    function close() {
+      panel.hidden = true;
+      fab.hidden = false;
+      fab.setAttribute('aria-expanded', 'false');
+      (opener && document.body.contains(opener) ? opener : fab).focus({ preventScroll: true });
+    }
+
+    fab.hidden = false;
+    fab.addEventListener('click', () => open(fab));
+    closeBtn.addEventListener('click', close);
+    panel.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+    document.querySelectorAll('[data-open-chat]').forEach(el => {
+      el.hidden = false;
+      el.addEventListener('click', e => { e.preventDefault(); open(el); });
+    });
+  })();
+  </script>
 </body>
 </html>
