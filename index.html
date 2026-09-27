@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#8C1D2F" />
+  <title>WEHEM Digital Agency — Marketing digital à Libreville, Gabon</title>
+  <meta name="description" content="WEHEM accompagne les PME, freelances et startups d’Afrique francophone avec une identité forte, du contenu Facebook utile et une stratégie digitale claire. Basée à Libreville, Gabon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="WEHEM Digital Agency" />
+  <meta property="og:title" content="WEHEM Digital Agency — Rendre visible ce qui mérite d’être vu" />
+  <meta property="og:description" content="Identité de marque, gestion de page Facebook et stratégie digitale pour les PME d’Afrique francophone." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%238C1D2F'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23F5D67B'%3EW%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "WEHEM Digital Agency",
+    "description": "Agence de marketing digital pour PME, freelances et startups d’Afrique francophone : identité de marque digitale, gestion de page Facebook et contenu, audit et stratégie digitale.",
+    "email": "abaghaabessolo@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Libreville", "addressCountry": "GA" },
+    "areaServed": ["Gabon", "Afrique francophone"],
+    "knowsLanguage": "fr",
+    "paymentAccepted": "Airtel Money, Moov Money, Visa",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Identité de Marque Digitale" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestion de Page Facebook & Contenu" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit & Stratégie Digitale" } }
+      ]
+    }
+  }
+  </script>
+  <style>
+    :root{
+      color-scheme:light dark;
+      --bg:#f4f0e8;--surface:#fffdf8;--ink:#1f2019;--muted:#5e6257;--line:#c9bea5;
+      --red:#8C1D2F;--red-deep:#681421;--green:#2E4B23;--gold:#C9A227;--gold-bright:#F5D67B;
+      --on-dark:#fff9ed;--on-dark-muted:#f0e9dd;--gold-line:rgba(229,198,121,.5);
+      --shadow:0 18px 55px rgba(53,35,18,.14);
+      --brand-gradient:linear-gradient(90deg,#8C1D2F 0%,#6f292b 46%,#484025 66%,#2E4B23 100%);
+      --gold-metal:linear-gradient(100deg,#F5D67B 0%,#C9A227 54%,#8C6A1F 100%);
+      --r-sm:8px;--r-md:14px;--nav-h:66px;
+    }
+    @media(prefers-color-scheme:dark){
+      :root{--bg:#0c110d;--surface:#141b15;--ink:#f5f0e5;--muted:#c6c0b3;--line:#4a4030;--shadow:0 20px 60px rgba(0,0,0,.4)}
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:4px}
+    [id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .skip{position:absolute;left:12px;top:-60px;z-index:20;background:var(--red);color:#fff;padding:10px 16px;border-radius:var(--r-sm);font-weight:700}
+    .skip:focus{top:12px}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2{font-family:"Playfair Display",Georgia,serif;font-weight:600;letter-spacing:-.025em;line-height:.98;text-wrap:balance}
+    .serif{font-family:"Playfair Display",Georgia,serif}
+    .gold-text{background:var(--gold-metal);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+    /* Navigation */
+    .nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .nav-brand{font-family:"Playfair Display",Georgia,serif;font-weight:700;letter-spacing:.08em;font-size:1.15rem;color:var(--red)}
+    .nav-links{display:flex;align-items:center;gap:24px;font-size:.88rem;font-weight:700}
+    .nav-links a:not(.nav-cta):hover{color:var(--red)}
+    @media(prefers-color-scheme:dark){.nav-brand,.nav-links a:not(.nav-cta):hover{color:var(--gold-bright)}}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;font-weight:800;transition:transform .18s ease,filter .18s ease,border-color .18s ease,color .18s ease}
+    .nav-cta{padding:10px 16px;background:var(--red);color:#fff8e8;box-shadow:inset 0 0 0 1px rgba(229,198,121,.3)}
+    .nav-cta:hover{filter:brightness(1.12)}
+
+    /* Hero */
+    .hero{padding:70px 0 64px;min-height:min(760px,100svh);display:flex;align-items:center;position:relative;overflow:hidden;background:var(--brand-gradient);color:#fff}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,5,8,.2),transparent 42%,rgba(3,17,9,.16)),radial-gradient(circle at 78% 28%,rgba(229,198,121,.12),transparent 30%);pointer-events:none}
+    .hero:after{content:"";position:absolute;width:560px;height:560px;right:-190px;bottom:-280px;border:1px solid rgba(229,198,121,.22);border-radius:50%;box-shadow:0 0 0 42px rgba(229,198,121,.035),0 0 0 92px rgba(229,198,121,.025);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:76px;align-items:center;position:relative;z-index:1}
+    .tag{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--gold-bright);margin-bottom:24px}
+    .tag:before{content:"";width:30px;height:1px;background:currentColor}
+    h1{font-size:clamp(2.7rem,7.8vw,7rem);max-width:780px;margin-bottom:25px}
+    h1 em{font-style:normal}
+    .lead{font-size:clamp(1.02rem,1.7vw,1.3rem);color:var(--on-dark-muted);max-width:650px;margin-bottom:34px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:14px 21px;min-height:48px}
+    .btn-primary{background:var(--gold-metal);color:#24180c;box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
+    .btn-primary:hover{filter:brightness(1.08);transform:translateY(-2px)}
+    .btn-secondary{border:1px solid var(--gold-line);color:#fff8e9;background:rgba(20,10,8,.12)}
+    .btn-secondary:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+    .hero-panel{border-top:1px solid rgba(229,198,121,.46);border-bottom:1px solid rgba(229,198,121,.46);padding:24px 0}
+    .brand-lockup{display:grid;grid-template-columns:112px 1fr;gap:22px;align-items:center;padding-bottom:24px;border-bottom:1px solid rgba(229,198,121,.24)}
+    .brand-emblem{width:112px;height:112px;filter:drop-shadow(0 8px 18px rgba(16,7,4,.24))}
+    .brand-name{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2.15rem,4vw,3.35rem);font-weight:700;line-height:.9;letter-spacing:.06em;white-space:nowrap;margin:0}
+    .brand-e{display:inline-grid;width:.55em;height:.69em;grid-template-rows:repeat(3,1fr);gap:.12em;vertical-align:.01em;margin:0 .015em}
+    .brand-e i{display:block;background:var(--gold-metal);height:.12em;align-self:center}
+    .brand-subtitle{display:flex;align-items:center;gap:10px;margin-top:12px;color:var(--gold-bright);font-size:.66rem;line-height:1;letter-spacing:.28em;text-transform:uppercase;white-space:nowrap;margin-bottom:0}
+    .brand-subtitle:before,.brand-subtitle:after{content:"";width:24px;height:1px;background:currentColor;opacity:.75}
+    .levers{list-style:none;margin:0;padding:0}
+    .levers li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;padding:18px 0;border-bottom:1px solid rgba(229,198,121,.18)}
+    .levers li:last-child{border-bottom:0;padding-bottom:0}
+    .levers strong{font-family:"Playfair Display",Georgia,serif;font-size:1.48rem;font-weight:600;display:block;color:var(--on-dark);line-height:1.08}
+    .levers p{color:#ded8ca;margin:8px 0 0;font-size:.9rem}
+    .num{color:var(--gold-bright);font-weight:800;font-size:.82rem;padding-top:5px}
+
+    /* Bandeau */
+    .proof{background:linear-gradient(90deg,var(--red-deep),var(--red) 40%,var(--green));color:#fff8e9;padding:17px 0;border-top:1px solid rgba(229,198,121,.35)}
+    .proof ul{list-style:none;margin:0 auto;padding:0;display:flex;justify-content:center;gap:12px 35px;flex-wrap:wrap;font-weight:700;font-size:.88rem}
+    .proof li{display:flex;align-items:center;gap:9px}
+    .proof li:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold-bright)}
+
+    /* Sections */
+    section{padding:96px 0}
+    .section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:60px;align-items:end;margin-bottom:50px}
+    .section-head h2{font-size:clamp(2.5rem,6vw,5.6rem);margin:0}
+    .section-head p{font-size:1.06rem;color:var(--muted);max-width:610px;margin:0}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .service{padding:35px 30px 34px;border-right:1px solid var(--line)}
+    .service:last-child{border-right:0}
+    .service-no{font-family:"Playfair Display",Georgia,serif;font-size:2.35rem;color:var(--gold);line-height:1}
+    .service h3{font-family:"Playfair Display",Georgia,serif;font-size:1.22rem;line-height:1.3;margin:38px 0 13px}
+    .service p{color:var(--muted);font-size:.94rem;margin-bottom:22px}
+    .service ul{padding:0;margin:0;list-style:none}
+    .service li{padding:8px 0;border-top:1px solid var(--line);font-size:.86rem;font-weight:700}
+
+    .manifesto{background:var(--brand-gradient);color:#fff;border-block:1px solid rgba(229,198,121,.25)}
+    .manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .manifesto h2{font-size:clamp(2.6rem,7vw,6.8rem);margin:0}
+    .manifesto-copy{border-left:1px solid var(--gold-bright);padding-left:30px}
+    .manifesto-copy p{font-size:1.2rem;color:var(--on-dark-muted)}
+    .manifesto-copy strong{display:block;font-family:"Playfair Display",Georgia,serif;font-size:1.2rem;margin-top:28px;color:var(--gold-bright)}
+
+    .work{background:var(--surface)}
+    .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;list-style:none;margin:0;padding:0}
+    .work-card{min-height:260px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#281116,#56101c);color:#fff;position:relative;overflow:hidden;border-radius:var(--r-md);box-shadow:var(--shadow);border:1px solid rgba(187,141,60,.35);transition:transform .2s ease,border-color .2s ease}
+    .work-card:hover,.work-card:focus-within{transform:translateY(-3px);border-color:var(--gold-bright)}
+    .work-card:nth-child(2){background:linear-gradient(145deg,#681722,#3d1518)}
+    .work-card:nth-child(3){background:linear-gradient(145deg,#4f401e,#2d2f1b)}
+    .work-card:nth-child(4){background:linear-gradient(145deg,#274632,#12281c)}
+    .work-card:after{content:attr(data-index);position:absolute;right:8px;bottom:-30px;font-family:"Playfair Display",Georgia,serif;font-size:9rem;color:rgba(229,198,121,.09);line-height:1;pointer-events:none}
+    .work-card h3{font-family:"Playfair Display",Georgia,serif;font-size:1.48rem;margin:0;max-width:320px;line-height:1.2;color:var(--on-dark)}
+    .work-card p{margin:0 0 6px;color:var(--gold-bright);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+    .work-link{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:.9rem;color:#f5ead4;min-height:44px}
+    /* Toute la carte devient cliquable */
+    .work-link:after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+    .work-link:hover{color:var(--gold-bright)}
+
+    .method{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+    .method h2{font-size:clamp(2.6rem,6vw,5.8rem);position:sticky;top:110px;align-self:start}
+    .steps{counter-reset:step;list-style:none;margin:0;padding:0}
+    .step{counter-increment:step;display:grid;grid-template-columns:70px 1fr;gap:22px;padding:28px 0;border-top:1px solid var(--line)}
+    .step:last-child{border-bottom:1px solid var(--line)}
+    .step:before{content:"0" counter(step);font-family:"Playfair Display",Georgia,serif;font-size:2rem;color:var(--gold);line-height:1.2}
+    .step h3{margin:0 0 8px;font-size:1.15rem}
+    .step p{margin:0;color:var(--muted);font-size:.95rem}
+
+    .contact{padding:90px 0;background:var(--brand-gradient);color:#fff;border-top:1px solid rgba(229,198,121,.25)}
+    .contact-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:end}
+    .contact h2{font-size:clamp(2.6rem,8vw,7.5rem);margin:0 0 25px}
+    .contact p{color:#e2ddd2;max-width:650px}
+    .contact-actions{display:flex;flex-direction:column;gap:12px}
+    .contact-actions a{min-height:55px;gap:12px;border:1px solid var(--gold-line);padding:14px 18px;color:#fff8e9;background:rgba(16,7,5,.14);border-radius:var(--r-sm);display:flex;justify-content:space-between;align-items:center;font-weight:700;overflow-wrap:anywhere;transition:border-color .18s ease,color .18s ease}
+    .contact-actions a:hover{border-color:var(--gold-bright);color:var(--gold-bright)}
+    .pay{margin-top:12px;color:#d9d1c1;font-size:.8rem}
+    .pay strong{color:var(--gold-bright)}
+
+    footer{background:#090c09;color:#a9a294;padding:26px 0;font-size:.78rem;border-top:1px solid #241e15}
+    .footer-inner{display:flex;justify-content:space-between;gap:8px 20px;flex-wrap:wrap}
+    .footer-inner strong{font-family:"Playfair Display",Georgia,serif;color:var(--gold-bright);letter-spacing:.08em}
+
+    @media(max-width:860px){
+      .nav-links a:not(.nav-cta){display:none}
+      .wrap{width:min(100% - 32px,1160px)}
+      .hero{min-height:auto;padding:58px 0}
+      .hero-grid,.section-head,.manifesto-grid,.method,.contact-grid{grid-template-columns:1fr;gap:42px}
+      .hero-panel{max-width:600px}
+      .services{grid-template-columns:1fr}
+      .service{border-right:0;border-bottom:1px solid var(--line)}
+      .service:last-child{border-bottom:0}
+      .service h3{margin-top:20px}
+      .section-head{margin-bottom:34px}
+      .method h2{position:static}
+      .contact-actions{max-width:560px}
+    }
+    @media(max-width:560px){
+      :root{--nav-h:60px}
+      .nav-cta{font-size:.78rem;padding:9px 13px}
+      .hero{padding-top:42px}
+      .tag{font-size:.67rem}
+      .actions{display:grid}
+      .btn{width:100%}
+      .brand-lockup{grid-template-columns:86px 1fr;gap:15px}
+      .brand-emblem{width:86px;height:86px}
+      .brand-name{font-size:1.95rem}
+      .brand-subtitle{font-size:.55rem;letter-spacing:.2em;gap:6px}
+      .brand-subtitle:before,.brand-subtitle:after{width:14px}
+      .levers li{grid-template-columns:42px 1fr}
+      .levers strong{font-size:1.3rem}
+      section{padding:70px 0}
+      .work-grid{grid-template-columns:1fr}
+      .work-card{min-height:225px}
+      .manifesto-copy{padding-left:20px}
+      .step{grid-template-columns:52px 1fr;gap:12px}
+      .contact{padding:70px 0}
+      .footer-inner{flex-direction:column}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*:before,*:after{transition:none!important}
+      .btn-primary:hover,.work-card:hover,.work-card:focus-within{transform:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <nav class="nav" aria-label="Navigation principale">
+    <div class="wrap nav-inner">
+      <a class="nav-brand" href="#top" aria-label="WEHEM Digital Agency — retour en haut">WEHEM</a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#realisations">Univers visuel</a>
+        <a href="#methode">Méthode</a>
+        <a class="nav-cta" href="#contact">Parlons de votre marque</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="contenu">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="tag">Marketing digital · Afrique francophone</p>
+          <h1 id="hero-title">Votre talent mérite d’être <em class="gold-text">vu.</em></h1>
+          <p class="lead">Nous aidons les PME, freelances et startups à transformer une présence discrète en marque claire, crédible et mémorable.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Demander un diagnostic</a>
+            <a class="btn btn-secondary" href="#services">Découvrir nos services</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Identité WEHEM et nos trois leviers">
+          <div class="brand-lockup">
+            <svg class="brand-emblem" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="goldEmblem" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5D67B"/><stop offset=".54" stop-color="#C9A227"/><stop offset="1" stop-color="#8C6A1F"/></linearGradient></defs>
+              <g fill="none" stroke="url(#goldEmblem)" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M28 65a52 52 0 0 1 104 0" stroke-width="2.3"/>
+                <path d="M38 65a42 42 0 0 1 84 0" stroke-width="1" opacity=".72"/>
+                <path d="M80 5v13M49 13l7 12M111 13l-7 12M27 34l12 7M133 34l-12 7M18 63h15M142 63h-15" stroke-width="2"/>
+                <circle cx="80" cy="67" r="29" stroke-width="1.7"/>
+                <path d="M51 67h58M80 38c-10 9-15 18-15 29s5 21 15 29M80 38c10 9 15 18 15 29s-5 21-15 29M55 53h50M55 81h50" stroke-width="1" opacity=".72"/>
+                <path d="M78 46l-7 4-4 8-7 7 5 7 3 11 8 7 4-3 6-12 1-9 7-6-4-9-8-2z" fill="url(#goldEmblem)" stroke="none" opacity=".95"/>
+                <path d="M80 93c-8 9-15 15-25 17-11 2-23-1-36-8 9 13 21 22 36 27-10 1-19-1-28-5 11 12 25 19 42 21" stroke-width="3"/>
+                <path d="M80 93c8 9 15 15 25 17 11 2 23-1 36-8-9 13-21 22-36 27 10 1 19-1 28-5-11 12-25 19-42 21" stroke-width="3"/>
+                <path d="M69 145l11-35 11 35M72 105l8 5 8-5" stroke-width="2.3"/>
+              </g>
+            </svg>
+            <div>
+              <p class="brand-name"><span class="sr-only">WEHEM</span><span class="gold-text" aria-hidden="true">W<span class="brand-e"><i></i><i></i><i></i></span>H<span class="brand-e"><i></i><i></i><i></i></span>M</span></p>
+              <p class="brand-subtitle"><span>Digital Agency</span></p>
+            </div>
+          </div>
+          <ol class="levers">
+            <li><span class="num" aria-hidden="true">01</span><div><strong>Une identité qui vous ressemble</strong><p>Une image cohérente, professionnelle et adaptée à votre marché.</p></div></li>
+            <li><span class="num" aria-hidden="true">02</span><div><strong>Du contenu qui crée le lien</strong><p>Une présence Facebook régulière, humaine et utile.</p></div></li>
+            <li><span class="num" aria-hidden="true">03</span><div><strong>Une stratégie qui avance</strong><p>Des priorités nettes pour arrêter de publier au hasard.</p></div></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <div class="proof">
+      <ul class="wrap" aria-label="Nos engagements">
+        <li>Expertise locale</li><li>Conseils concrets</li><li>Français clair</li><li>Accompagnement humain</li>
+      </ul>
+    </div>
+
+    <section id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="services-title">Trois services.<br>Un cap clair.</h2>
+          <p>Pas de jargon ni de solutions surdimensionnées. Nous travaillons d’abord sur les fondations qui font gagner votre marque en confiance, en cohérence et en visibilité.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="service-no" aria-hidden="true">01</div>
+            <h3>Identité de Marque Digitale</h3>
+            <p>Posez une base visuelle et éditoriale qui permet à votre public de vous reconnaître au premier regard.</p>
+            <ul><li>Direction visuelle</li><li>Ton de marque</li><li>Kit de présence digitale</li></ul>
+          </article>
+          <article class="service">
+            <div class="service-no" aria-hidden="true">02</div>
+            <h3>Gestion de Page Facebook &amp; Contenu</h3>
+            <p>Transformez votre page en espace actif, utile et régulier — sans sacrifier votre temps.</p>
+            <ul><li>Planification éditoriale</li><li>Création de contenus</li><li>Suivi mensuel</li></ul>
+          </article>
+          <article class="service">
+            <div class="service-no" aria-hidden="true">03</div>
+            <h3>Audit &amp; Stratégie Digitale</h3>
+            <p>Comprenez ce qui bloque votre visibilité et repartez avec des actions prioritaires, réalistes et mesurables.</p>
+            <ul><li>Diagnostic de présence</li><li>Recommandations concrètes</li><li>Plan d’action priorisé</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <div class="wrap manifesto-grid">
+        <h2 id="manifesto-title">Le talent ne manque pas.<br><span class="gold-text">La visibilité, si.</span></h2>
+        <div class="manifesto-copy">
+          <p>Une bonne marque n’a pas besoin de crier plus fort. Elle doit être comprise plus vite, reconnue plus facilement et choisie avec confiance.</p>
+          <strong>Nous faisons renaître vos marques.</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="realisations" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="work-title">Notre univers<br>en images.</h2>
+          <p>Explorez la sélection de contenus et de directions visuelles partagée par l’agence sur Canva.</p>
+        </div>
+        <ul class="work-grid">
+          <li class="work-card" data-index="1"><div><p>Sélection Canva · 01</p><h3>Direction artistique &amp; identité visuelle</h3></div><a class="work-link" href="https://canva.link/nk34wjpd703xtu8" target="_blank" rel="noopener">Ouvrir sur Canva <span aria-hidden="true">↗</span><span class="sr-only"> : Direction artistique &amp; identité visuelle (nouvel onglet)</span></a></li>
+          <li class="work-card" data-index="2"><div><p>Sélection Canva · 02</p><h3>Contenu social &amp; présence de marque</h3></div><a class="work-link" href="https://canva.link/nr83h56fvt5uil9" target="_blank" rel="noopener">Ouvrir sur Canva <span aria-hidden="true">↗</span><span class="sr-only"> : Contenu social &amp; présence de marque (nouvel onglet)</span></a></li>
+          <li class="work-card" data-index="3"><div><p>Sélection Canva · 03</p><h3>Campagnes &amp; messages commerciaux</h3></div><a class="work-link" href="https://canva.link/muix0747h6kwgf9" target="_blank" rel="noopener">Ouvrir sur Canva <span aria-hidden="true">↗</span><span class="sr-only"> : Campagnes &amp; messages commerciaux (nouvel onglet)</span></a></li>
+          <li class="work-card" data-index="4"><div><p>Sélection Canva · 04</p><h3>Créations pour marques ambitieuses</h3></div><a class="work-link" href="https://canva.link/de0rnvr27swzhdl" target="_blank" rel="noopener">Ouvrir sur Canva <span aria-hidden="true">↗</span><span class="sr-only"> : Créations pour marques ambitieuses (nouvel onglet)</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="methode" aria-labelledby="method-title">
+      <div class="wrap method">
+        <h2 id="method-title">Une méthode simple, sans détour.</h2>
+        <ol class="steps">
+          <li class="step"><div><h3>Écouter avant de créer</h3><p>Nous clarifions votre activité, votre public et le résultat que vous attendez.</p></div></li>
+          <li class="step"><div><h3>Observer ce qui existe</h3><p>Votre communication actuelle est analysée pour identifier les forces et les points de rupture.</p></div></li>
+          <li class="step"><div><h3>Choisir les bonnes priorités</h3><p>Nous avançons sur les actions qui ont le plus d’impact, au lieu de tout refaire sans raison.</p></div></li>
+          <li class="step"><div><h3>Créer, mesurer, améliorer</h3><p>Chaque livrable sert un objectif clair et peut évoluer avec les retours du terrain.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="tag">Votre prochain chapitre commence ici</p>
+          <h2 id="contact-title">Rendons votre marque <span class="gold-text">impossible à ignorer.</span></h2>
+          <p>Expliquez-nous votre besoin. Nous vous répondrons avec une première orientation claire, sans discours compliqué.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="mailto:abaghaabessolo@gmail.com?subject=Demande%20de%20diagnostic%20WEHEM&amp;body=Bonjour%20WEHEM%2C%0A%0AMon%20activit%C3%A9%20%3A%20%0AMon%20besoin%20%3A%20%0A"><span>Écrire à abaghaabessolo@gmail.com</span><span aria-hidden="true">↗</span></a>
+          <p class="pay">Paiements acceptés : <strong>Airtel Money · Moov Money · Visa</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <strong>WEHEM Digital Agency</strong>
+      <span>Libreville, Gabon · Afrique francophone</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+</body>
+</html>
