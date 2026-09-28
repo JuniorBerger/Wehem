@@ -17,7 +17,7 @@ Objectif parallèle : consultant IA Automation sur Upwork (marché international
 | Base44 | No-code apps et sites | ✅ Actif |
 | muse.ai | Vidéo IA | ✅ Actif |
 | GitHub Pages | Site WEHEM — wehem-agency.github.io | ✅ Actif |
-| n8n | — | ❌ Abandonné |
+| n8n | Automatisation | ⏸️ Uniquement sur demande explicite |
 | WordPress | — | ❌ Abandonné |
 
 # Contexte des projets
@@ -38,7 +38,8 @@ Mes projets entrent dans l'une de ces trois catégories :
 - Ne jamais inventer : stats, résultats, fonctionnalités, clients.
 
 # Pièges à éviter
-- ❌ Ne pas proposer n8n ou WordPress (abandonnés définitivement).
+- ❌ Ne pas proposer WordPress (abandonné définitivement).
+- ⏸️ n8n : ne jamais le proposer de ma propre initiative. L'utiliser uniquement quand je le demande explicitement.
 - ❌ Ne pas proposer Docker ou infra complexe sans le signaler et justifier.
 - ❌ Ne pas supposer un accès facile aux cartes bancaires internationales.
 - ✅ Prioriser les solutions gratuites ou freemium, compatibles mobile, intégrables à Hermes Agent ou Base44.
